@@ -1,0 +1,75 @@
+<template name="details">
+ 
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="main.html">WG</a>
+        </div>
+        <!-- /.navbar-header -->
+        <ul class="nav navbar-nav">
+            <li><a href="#">Dashboard</a></li>
+        </ul>
+    </nav>  
+    
+   	<div class="container-fluid main-container">
+        <div class="col-md-2" id="fields">
+            <div class="col-md-offset-3" style="font-size: 30px;">
+                <i class="fa fa-user fa-5x" aria-hidden="true" ></i>
+            </div>
+            <br>
+            <div class="sidebar">
+                <ul class="nav nav-pills nav-stacked">
+				    <li class="active"><a href="#">Goal Review</a></li>
+				    <li><a href="#">Positive Aspects</a></li>
+                    <li><a href="#">Challenges</a></li>
+				    <li><a href="#">Referee &amp; Bets</a></li>
+			    </ul>
+		    </div>
+        </div>
+		<div class="col-md-6">           
+            <h2>Lose Weight</h2>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+                <span class="progress-type">Week 3 of 5</span>
+                <span class="progress-completed">60%</span>
+            </div>
+            <div class="col-md-6">
+                    <div class="alert alert-warning">
+                        <p> My Initial weight: 75.0 </p>
+                        <p> My Target weight: 70.0</p>
+                        <p> The goal deadline: September 20</p>
+                    </div>
+            </div>
+            <div class="col-md-6">
+                    <div class="alert alert-success">
+                        <p> My Current weight: 72.5 </p>
+                        <p> This week's goal: <strong>72.0</strong></p>
+                        <p> The next report due on: <strong>September 15</strong></p>
+                    </div>
+            </div>
+            <div class="col-md-12">
+                {{> graph}}
+            </div>
+            <div class="col-md-12 panel-group" id="accordion">
+                {{> dailyReport}}
+            </div>
+         </div>
+         <div class="col-md-4">
+            <br><br><br><br><br>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Coach
+                </div>
+                <div class="panel-body">
+                    <i class="fa fa-user-secret fa-4x col-md-3" aria-hidden="true"></i>
+                    <div class="col-md-9">
+                        <strong>magda@gmail.com</strong>
+                        <a href="#" class="pull-right" data-content="Some content inside the popover">Contact her</a>
+                    </div>
+                </div>
+            </div>
+            {{> timeline}}
+        </div>  
+    </div>
+</template>
